@@ -1,9 +1,32 @@
-import React from 'react'
+import Link from "next/link";
+import Image from "next/image";
+import React from "react";
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
-  )
-}
+    <div className="fixed left-0 top-0 p-10 w-44 h-screen bg-primary border-r-2 border-primary-border z-50 flex flex-col justify-between">
+      <div>
+        <Link href="/" className="w-full flex justify-center mb-10">
+          <Image src="/logo.png" alt="logo" width={50} height={50} />
+        </Link>
+        <div className="flex flex-col gap-6">
+          <Link href="/dashboard" className="hover:text-blue-300 duration-150">
+            Dashboard
+          </Link>
+          <Link href="/portfolio" className="hover:text-blue-300 duration-150">
+            Portfolio
+          </Link>
+          <Link href="/education" className="hover:text-blue-300 duration-150">
+            Education
+          </Link>
+          <Link href="/news" className="hover:text-blue-300 duration-150">
+            News
+          </Link>
+        </div>
+      </div>
+      <Link href="/" className="opacity-50 hover:opacity-100 duration-150">taelee.dev</Link>
+    </div>
+  );
+};
 
-export default Navbar
+export default Navbar;
