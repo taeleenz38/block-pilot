@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="fixed left-0 top-0 p-10 w-44 h-screen bg-primary border-r-2 border-primary-border z-50 flex flex-col justify-between">
       <div>
-        <Link href="/" className="w-full flex justify-center mb-12">
+        <Link href="/" className="w-full flex justify-center mb-12 hover:scale-105 duration-150">
           <Image src="/logo.png" alt="logo" width={60} height={60} />
         </Link>
         <div className="flex flex-col gap-6 font-semibold text-xl">
