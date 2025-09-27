@@ -3,14 +3,14 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { useChat } from "../hooks/useChat";
+import { useChat } from "../../hooks/useChat";
 
 const ChatWindow = () => {
   const { messages, input, isLoading, setInput, sendMessage, handleKeyPress } =
     useChat();
 
   return (
-    <div className="w-160 border-2 border-primary-border rounded-lg p-10 flex flex-col h-160">
+    <div className="w-3/5 border-2 border-primary-border rounded-lg p-10 flex flex-col h-144 shadow-lg shadow-blue-400/20">
       {/* Messages Container */}
       <div className="flex-1 overflow-y-auto mb-4 space-y-3">
         {messages.length === 0 ? (
